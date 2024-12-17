@@ -1,0 +1,14 @@
+services:
+  anki-syncserver:
+    container_name: anki-syncserver
+    platform: linux/amd64
+    build:
+      args:
+        SYNC_USER1: ${SYNC_USER1}
+        SYNC_HOST: ${SYNC_HOST}
+        SYNC_PORT: ${SYNC_PORT}
+        SYNC_BASE: ${SYNC_BASE}
+    volumes:
+      - ${USER_BASE}:${SYNC_BASE}
+    ports:
+      - ${USER_PORT}:${SYNC_PORT}/tcp
