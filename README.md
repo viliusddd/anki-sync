@@ -1,4 +1,4 @@
-# Anki Async Server
+# Self-Hosted Anki Sync Server
 
 # Reason behind the repo
 
